@@ -7,18 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace proyectoUniversidad.Account {
+namespace proyectoUniversidad.MostrarProductos {
     
     
-    public partial class ResetPasswordConfirmation {
-
+    public partial class mostrarProductos {
+        
         /// <summary>
-        /// login control.
+        /// tabla1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink login;    
+        protected global::System.Web.UI.WebControls.GridView tabla1;
     }
 }
