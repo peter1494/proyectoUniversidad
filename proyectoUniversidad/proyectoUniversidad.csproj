@@ -195,7 +195,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="MostrarProductos\mostrarProductos.aspx" />
+    <Content Include="Productos\modificarProducto.aspx" />
+    <Content Include="Productos\mostrarProductos.aspx" />
     <Content Include="Scripts\ai.0.22.19-build00125.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -275,11 +276,18 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="MostrarProductos\mostrarProductos.aspx.cs">
+    <Compile Include="Productos\modificarProducto.aspx.cs">
+      <DependentUpon>modificarProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Productos\modificarProducto.aspx.designer.cs">
+      <DependentUpon>modificarProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\mostrarProductos.aspx.cs">
       <DependentUpon>mostrarProductos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MostrarProductos\mostrarProductos.aspx.designer.cs">
+    <Compile Include="Productos\mostrarProductos.aspx.designer.cs">
       <DependentUpon>mostrarProductos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

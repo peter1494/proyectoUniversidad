@@ -12,7 +12,18 @@ namespace proyectoUniversidad.MostrarProductos
         #region Events
         protected void Page_Load(object sender, EventArgs e)
         {
-            llenarTabla();
+            if (!IsPostBack)
+            {
+                llenarTabla();
+            }
+            
+        }
+
+        protected void tablaProductos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GridViewRow row = tablaProductos.SelectedRow;
+            string codigo = row.Cells[0].Text;
+            Page.Response.Redirect("modificarProducto.aspx?id=" + codigo);
         }
         #endregion
 
@@ -20,8 +31,8 @@ namespace proyectoUniversidad.MostrarProductos
         public void llenarTabla()
         {
             DataAccessLayer dal = new DataAccessLayer();
-            tabla1.DataSource = dal.cargarProductos();
-            tabla1.DataBind();
+            tablaProductos.DataSource = dal.cargarProductos();
+            tablaProductos.DataBind();
         }
         #endregion
     }
